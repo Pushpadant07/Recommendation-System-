@@ -70,7 +70,7 @@ def get_Book_recommendations(Book_Title,topN):
     Book_idx  =  [i[0] for i in cosine_scores_10]
     Book_scores =  [i[1] for i in cosine_scores_10]
     
-    # Similar movies and scores
+    # Similar Books and scores
     Book_similar_show = pd.DataFrame(columns=["Book_Title","Rating"])
     Book_similar_show["Book_Title"] = Book.loc[Book_idx,"Book_Title"]
     Book_similar_show["Rating"] = Book_scores
